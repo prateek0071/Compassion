@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "391369137240",
+    "project_id": "compassion-93d5c",
+    "storage_bucket": "compassion-93d5c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:391369137240:android:a42963f753bc04920cbe2d",
+        "android_client_info": {
+          "package_name": "com.indusvalley.compassion"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "391369137240-d5ove4b28hcnfsvhi2qfh2mo1sbk5emb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.indusvalley.compassion",
+            "certificate_hash": "9fdfd2289775bad184fd76b2ff329ad670a342e1"
+          }
+        },
+        {
+          "client_id": "391369137240-117p2ig0knr6sk72j8obtjrhibtfh1ko.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKsM8T1xruiauNkYdTtGyWOcdIX550gyg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "391369137240-117p2ig0knr6sk72j8obtjrhibtfh1ko.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
