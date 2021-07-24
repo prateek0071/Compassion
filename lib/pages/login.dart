@@ -1,12 +1,15 @@
+import 'package:compassion/utilities/authentication.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-
+import 'home.dart';
 class LoginPage extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();
 }
 
 class _LoginPageState extends State<LoginPage> {
+  var username;
+  var password;
   GlobalKey<FormState> formkey = new GlobalKey<FormState>();
 
   @override
@@ -34,18 +37,39 @@ class _LoginPageState extends State<LoginPage> {
     
                     //username field
                     TextFormField(
-                      decoration : deco("Enter your username", "Enter your password")
+                      decoration : deco("Enter your username", "Enter your password"),
+                      onChanged : (usern){
+                        setState(() {
+                          username = usern;
+                        });
+                      }
                     ),
                     //password field
                     TextFormField(
                       decoration : deco("Enter your password", "password"),
                       obscureText: true,
+                      onChanged: (pass){
+                        setState(() {
+                          password = pass;
+                        });
+                      },
                     ),
                   ],
                 ),
               ),
               SizedBox(height: 20,),
-              MaterialButton(onPressed: (){}, child: Text("Sign In",
+              MaterialButton(onPressed:() sync*{
+                 try {
+                   Signin(username,password);
+                 } catch (e) {
+                   //to mention an alert dialog if the code works
+                 }
+                 
+                 
+                //  Navigator.pushReplacementNamed(context, HomePage());
+
+              }
+              , child: Text("Sign In",
               style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
               ),
               elevation: 9.0,
@@ -54,7 +78,9 @@ class _LoginPageState extends State<LoginPage> {
               SizedBox(height: 20,),
               Text("OR"),
               MaterialButton(
-                onPressed: (){},
+                onPressed: (){
+                  googleSignIn;
+                },
                 child: Row(children: <Widget>[
                   Icon(Icons.mail_outline, color:Colors.red),
                   Text("Log In with google"),  

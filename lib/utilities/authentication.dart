@@ -40,6 +40,11 @@ googleSignin() async{
         break;
       default:
     }
+  } finally{
+   /*
+   IF USER IS AUTHENTICATED : 
+      PUSH USER TO HOMESCREEN
+      */
   }
 
 
