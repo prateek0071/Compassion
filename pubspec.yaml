@@ -27,6 +27,8 @@ dependencies:
   firebase_core: "^0.7.0"
   firebase_auth: "^0.20.1"
   google_sign_in:
+  agora_rtc_engine:
+  permission_handler:
     
 dev_dependencies:
   flutter_test:
