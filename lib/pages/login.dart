@@ -1,7 +1,6 @@
-import 'package:compassion/utilities/authentication.dart';
-import 'package:flutter/gestures.dart';
+// import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'home.dart';
+// import 'home.dart';
 class LoginPage extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -59,14 +58,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
               SizedBox(height: 20,),
               MaterialButton(onPressed:() sync*{
-                 try {
-                   Signin(username,password);
-                 } catch (e) {
-                   //to mention an alert dialog if the code works
-                 }
-                 
-                 
-                //  Navigator.pushReplacementNamed(context, HomePage());
+               Navigator.restorablePushReplacementNamed(context, "/choices");
 
               }
               , child: Text("Sign In",
@@ -79,7 +71,6 @@ class _LoginPageState extends State<LoginPage> {
               Text("OR"),
               MaterialButton(
                 onPressed: (){
-                  googleSignIn;
                 },
                 child: Row(children: <Widget>[
                   Icon(Icons.mail_outline, color:Colors.red),

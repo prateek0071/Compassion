@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-
-import 'pages/login.dart';
+import 'pages/choices.dart';
+import 'pages/home.dart';
+// import 'pages/login.dart';
 
 //Indexpage is the video calling page 
 
@@ -12,14 +13,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(      
-      home: Container(),
+ 
       routes: {
-        "/" : (context) => LoginPage(),
-        // "/homepage" : (context) => HomePage(),
-        // "/signup" : (context) => SignupPage(),
+        "/" : (context) => HomePage(),
+        "/choices" : (context) => Choices(),
       },
       theme: ThemeData(
-       primarySwatch: Colors.purple,
+       primarySwatch: Colors.indigo,
        accentColor:Colors.lightBlue 
       ),
     );
