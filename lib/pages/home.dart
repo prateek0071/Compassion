@@ -17,11 +17,13 @@ class HomePage extends StatelessWidget {
             children: [
               homeCard("Get some help"
               , "Get some help by talking tosomeone who is eager to help you on a video call"
-              , cardImage1
+              , cardImage1, 
+              context,
               ),
               homeCard("Assist someone", 
               "Assist someone get relief by talking to them on phone and assisting them in some mental health care"
-              ,cardImage2
+              ,cardImage2, 
+              context,
               ),
         
             ],
