@@ -1,6 +1,15 @@
 // import 'dart:ffi';
 
+import 'package:compassion/utilities/videocall.dart';
 import 'package:flutter/material.dart';
+import 'package:permission_handler/permission_handler.dart';
+import 'package:agora_rtc_engine/rtc_engine.dart';
+import 'package:agora_rtc_engine/rtc_local_view.dart' as RtcLocalView;
+import 'package:agora_rtc_engine/rtc_remote_view.dart' as RtcRemoteView;
+
+const token = "0060ad7369f8fb6428085df81e651b3f33aIAC1VN3r3ks+pDLQXB1aTO8ZKnIVs5PSER2BWPIOFGWLYQrCxmsAAAAAEAD7XOPUtnYCYQEAAQC0dgJh";
+const appId = "0ad7369f8fb6428085df81e651b3f33a";
+
 
 //global variables required for declaration of values
 dynamic chosenValues = [];
@@ -16,12 +25,10 @@ class _ChoicesState extends State<Choices> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    initForAgora();
+   
   }
 
-  Future<void> initForAgora() async{
-
-  }
+  
 
   @override
   Widget build(BuildContext context) {  
@@ -114,7 +121,12 @@ class _ChoicesState extends State<Choices> {
               padding: const EdgeInsets.all(20.0),
               child: MaterialButton(
                 padding: EdgeInsets.all(13),
-                onPressed: (){},
+                onPressed: (){
+                   Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => VideoCallScreen()),
+                    );
+                },
                 elevation: 15,
                 child: Text("Go"),
                 color: Colors.redAccent,

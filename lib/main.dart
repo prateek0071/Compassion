@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'pages/choices.dart';
 import 'pages/home.dart';
 // import 'pages/login.dart';
-
 //Indexpage is the video calling page 
 
 void main(){

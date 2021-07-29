@@ -24,9 +24,9 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
+  flutter_webrtc:
   agora_rtc_engine:
   permission_handler:
-  flutter_swiper:
 
     
 dev_dependencies:
