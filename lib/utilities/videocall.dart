@@ -52,7 +52,7 @@ Future<void> initForAgora() async{
         },
       ),
     );
-    await _engine.joinChannel(token, "channel1", null, 0);
+    await _engine.joinChannel(to3+, "channel1", null, 0);
   }
 
   @override
